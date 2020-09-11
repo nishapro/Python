@@ -1,0 +1,17 @@
+from tkinter import *
+root=Tk()
+main_menu=Menu(root)
+root.config(menu=main_menu)
+#creating file menu
+fileMenu=Menu(main_menu)
+main_menu.add_cascade(label="file",menu=fileMenu)
+editMenu=Menu(main_menu)
+main_menu.add_cascade(label="edit",menu=editMenu)
+fileMenu.add_command(label="new project")
+fileMenu.add_command(label="Open")
+fileMenu.add_command(label="close")
+fileMenu.add_command(label="exit")
+editMenu.add_command(label="cut")
+editMenu.add_command(label="copy")
+editMenu.add_command(label="paste")
+root.mainloop()

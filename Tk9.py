@@ -1,0 +1,17 @@
+from tkinter import *
+root=Tk()
+main_menu=Menu(root)
+root.config(menu=main_menu)
+#creating mainMenu
+fileMenu=Menu(main_menu)
+main_menu.add_cascade(label="file",menu=fileMenu)
+editMenu=Menu(main_menu)
+main_menu.add_cascade(label="edit",menu=editMenu)
+fileMenu.add_command(label="new project")
+fileMenu.add_command(label="new Sratch file")
+fileMenu.add_command(label="open")
+save_menu=Menu(fileMenu)
+fileMenu.add_cascade(label="save",menu=save_menu)
+save_menu.add_command(label="save new")
+save_menu.add_command(label="save as")
+root.mainloop()
